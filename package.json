@@ -1,0 +1,24 @@
+{
+  "name": "medi-plus-html",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mediplus8/html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "description": ""
+}

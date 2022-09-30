@@ -1,0 +1,30 @@
+#ui-id-4 {
+  margin: auto;
+  padding: 0;
+}
+
+.lab1 {
+  animation: fadeIn 0.3s;
+  .thumbnailWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    .thumbnail {
+      background: url("../image/house.jpg") center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1;
+      padding: 1rem;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .thumbnail:nth-child(2n) {
+      background: url("../image/zeb.jpg") center;
+      background-size: cover;
+    }
+  }
+}
