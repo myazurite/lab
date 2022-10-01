@@ -13,9 +13,7 @@ gulp.task('sass', function(){
 
 gulp.task('serve', function () {
     browserSync.init({
-        server: {
-            baseDir: './'
-        },
+        server: {baseDir: './'},
         port: 4002
     });
 
