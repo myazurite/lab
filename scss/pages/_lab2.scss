@@ -1,0 +1,304 @@
+$primary-color: #ffffff;
+$secondary-color: #000000;
+$button-color: #1e7e34;
+
+#ui-id-6 {
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.3s;
+}
+
+.lab2 {
+  .labWrapper {
+    .form {
+      width: fit-content;
+      margin: 2rem auto auto auto;
+      color: $primary-color;
+      label {font-size: 1.2rem}
+      input {
+        margin-bottom: 0.5rem;
+        height: 1.2rem;
+        font-size: 1rem;
+      }
+      .buttonWrapper {
+        display: flex;
+        justify-content: center;
+        .formButton {
+          padding: 0.2rem 0.7rem;
+          margin: 0.3rem;
+          cursor: pointer;
+          border: 2px solid $primary-color;
+          border-radius: 0.25rem;
+          transition: 0.2s ease-in-out;
+        }
+        .formButton:hover {
+          background-color: $button-color;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+  .modalWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.5rem;
+    place-items: center;
+    padding: 2rem;
+    .lab-task {
+      button {
+        width: 70px;
+        padding: 0.3rem 0;
+        border: 1px solid $primary-color;
+        transition: 0.3s ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background: $button-color;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    //Universal modal setup for lab 2
+    .modal {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.1);
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #323232;
+      padding: 1rem 1.5rem;
+      width: 24rem;
+    }
+    .close-button {
+      float: right;
+      width: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background-color: lightgray;
+    }
+    .close-button:hover {
+      background-color: darkgray;
+    }
+    .show-modal {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1.0);
+      transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+  }
+  // Task 1
+  #l2-t1 {color: $primary-color;}
+
+  //Task 2
+  #l2-t2 {
+    color: $primary-color;
+    label {font-size: 1.2rem;}
+    input {
+      height: 1.5rem;
+      margin: 0.3rem 0 0.5rem 0;
+    }
+    #l2-t2-buttons {
+      display: flex;
+      flex-direction: column;
+      button {
+        width: 100px;
+        margin-bottom: 0.5rem;
+      }
+    }
+    #l2-t2-result {
+      position: absolute;
+      top: 29%;
+      right: 5%;
+      width: fit-content;
+    }
+  }
+
+  //Task 3
+  #l2-t3 {
+    #l2-t3-button {
+      width: fit-content;
+      padding: 0.2rem 0.3rem;
+      background: $primary-color;
+      border: 2px solid $button-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      margin: 0.5rem 0;
+    };
+    #l2-t3-result {
+      font-size: 1.2rem;
+      color: $primary-color;
+    }
+    #l2-t3-button:hover {
+      background-color: $button-color;
+      transition: 0.2s ease-in-out;
+    };
+  }
+
+  //Task 4
+  #l2-t4 {
+    color: $primary-color;
+    overflow-wrap: break-word;
+    input {margin: 0.3rem;}
+    #l2-t4-button {
+      padding: 0.2rem 0.3rem;
+      margin-bottom: 0.3rem;
+      width: fit-content;
+      background-color: $button-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    #array {
+      margin: 0.3rem 0;
+
+    }
+  }
+
+  //Task 5
+  #l2-t5 {
+    color: $primary-color;
+    input {margin: 0.3rem 0;}
+    #l2-t5-button {
+      padding: 0.2rem 0.3rem;
+      width: fit-content;
+      background: $button-color;
+      border-radius: 0.25rem;
+      margin: 0.2rem 0 0.5rem 0;
+      cursor: pointer;
+    }
+    #l2-t5-result {
+      height: 120px;
+      color: $secondary-color;
+      background-color: $primary-color;
+      border-radius: 0.25rem;
+      overflow-wrap: break-word;
+      overflow: auto;
+    }
+  }
+
+  //Task 6
+  #l2-t6 {
+    #l2-t6-input, #l2-t6-button {
+      margin: 0.3rem 0;
+    }
+    label, #l2-t6-button {
+      color: $primary-color;
+    }
+    #l2-t6-result {
+      color: $secondary-color;
+      overflow-wrap: break-word;
+      height: 100px;
+      margin: 0.7rem 0;
+      overflow: auto;
+      background-color: $primary-color;
+      border-radius: 0.25rem;
+    }
+    #l2-t6-button {
+      width: fit-content;
+      padding: 0.3rem 0.5rem;
+      background-color: $button-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+  }
+
+  //Task 7
+  #l2-t7 {
+    color: $primary-color;
+    #l2-t7-input {margin: 0.3rem 0;}
+    #l2-t7-button {
+      width: fit-content;
+      margin: 0.2rem 0 0.5rem 0;
+      padding: 0.3rem;
+      background-color: $button-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+  }
+
+  //Task 8
+  #l2-t8 {
+    color: $primary-color;
+    #l2-t8-input {margin: 0.3rem 0;}
+    #l2-t8-button {
+      margin: 0.2rem 0 0.5rem 0;
+      padding: 0.3rem;
+      width: fit-content;
+      background-color: $button-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    #l2-t8-result {
+      height: 120px;
+      color: $secondary-color;
+      background-color: $primary-color;
+      overflow-wrap: break-word;
+      overflow: auto;
+    }
+  }
+
+  //Task 9
+  #l2-t9 {
+    color: $primary-color;
+    input {margin: 0.3rem;}
+    .l2-t9-button {
+      text-align: center;
+      width: 200px;
+      padding: 0.3rem;
+      border-radius: 0.25rem;
+      background-color: $button-color;
+      margin: 0.3rem auto;
+      cursor: pointer;
+    }
+    #l2-t9-array, #l2-t9-result {
+      background-color: $primary-color;
+      color: $secondary-color;
+      border-radius: 0.25rem;
+    }
+    #l2-t9-array {
+      height: 90px;
+      margin: 0.2rem 0 0.5rem 0;
+      overflow-wrap: break-word;
+      overflow: auto;
+    }
+    #l2-t9-result {
+      height: 50px;}
+  }
+
+  //Task 10
+  #l2-t10 {
+    color: $primary-color;
+    input {margin: 0.3rem 0;}
+    .l2-t10-button {
+      width: 100px;
+      margin: 0.4rem auto;
+      padding: 0.2rem 0;
+      text-align: center;
+      background-color: $button-color;
+      border-radius: 0.25rem;
+      border: 1px solid $primary-color;
+      cursor: pointer;
+    }
+    #l2-t10-result {
+      margin: 0.3rem 0;
+      height: 50px;
+      background-color: $primary-color;
+      color: $secondary-color;
+      border-radius: 0.25rem;
+    }
+  }
+}
+

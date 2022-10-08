@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(window).on('load', function() {
+    //Initialize sidebar tabs
     $tabs = $( "#tabs" ).tabs({
         beforeLoad: function( event, ui ) {
             ui.jqXHR.fail(function() {
@@ -22,23 +23,16 @@ $(document).ready(function () {
     //get tab index
     $('#tabs').on('tabsactivate', function(event, ui) {
         var newIndex = ui.newTab.index();
-
         if (newIndex === 0) {
             console.log('Switched to landing page ');
         }
-        //lab 1
         if (newIndex === 1) {
             let thumbnailList = document.getElementsByClassName("thumbnail")
             var arr = Array.prototype.slice.call( thumbnailList )
-            console.log('Switched to labwork '+newIndex);
+            console.log('Switched to labwork ' + newIndex);
             const pressed = e => {
                 console.log(e.target.className)
             }
-            // $(document).on("click", "[class = thumbnail]", function(){
-            //     window.open()
-            //     console.log(true)
-            //     return false;
-            // });
         } else if (newIndex === 2) {
             console.log('Switched to labwork '+newIndex);
         } else if (newIndex === 3) {
@@ -46,6 +40,10 @@ $(document).ready(function () {
         }
     });
 })
+
+
+
+
 
 
 
